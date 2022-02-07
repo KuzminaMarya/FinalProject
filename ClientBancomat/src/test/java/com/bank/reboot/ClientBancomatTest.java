@@ -9,9 +9,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ClientBancomatTest {
     @Test
     void getBalanceCardTest(){
-        Client client=new Client("Мария Владимировна Иванова","1234 567890", "46734561234567890");
+        Client client=new Client("Мария Владимировна Иванова","1234 567890", "4673456123456789");
         Balance balance=Bankomat.insertCard(client);
         assertEquals("RUR",balance.getCurrency());
-        assertTrue(BigDecimal.TEN.equals(balance.getBalance()));
+        assertEquals(100,balance.getBalance());
     }
 }
