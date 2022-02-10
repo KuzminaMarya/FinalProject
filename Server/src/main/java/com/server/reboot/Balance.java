@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 
 public class Balance {
     private String currency;
-    private BigDecimal balance;
+    private int balance;
 
-    public Balance(String currency, BigDecimal balance){
+    public Balance(String currency, int balance){
         this.currency=currency;
         this.balance=balance;
     }
@@ -15,7 +15,7 @@ public class Balance {
         return currency;
     }
 
-    public BigDecimal getBalance() {
+    public int getBalance() {
         return balance;
     }
 }
