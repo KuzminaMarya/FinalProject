@@ -45,4 +45,13 @@ public class Card {
     public String getCur() {
         return cur;
     }
+
+    public Card(String cardNum, int ammount, String cur){
+        this.cardNum=cardNum;
+        this.ammount=ammount;
+        this.cur=cur;
+    }
+
+    public Card(){
+    }
 }
