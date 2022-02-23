@@ -25,7 +25,7 @@ public class ServerController {
 
 
     @GetMapping("/cards")
-    public List<CardDTO> getClientsInfo() {
+    public List<CardDTO> getCardsInfo() {
         return cardService.getAllCards();
     }
 
