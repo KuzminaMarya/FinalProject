@@ -27,10 +27,11 @@ public class HomeController {
         return "Банкомат готов";
     }
 
-    @GetMapping("/clients/{fio}/{dul}/{cardNum}")
+    @GetMapping("/clients/{fio}/{dul}/{cardNum}/{cardId}")
     public String home( @PathVariable("fio") String fio,
                         @PathVariable("dul") String dul,
-                        @PathVariable("cardNum") String cardNum){
+                        @PathVariable("cardNum") String cardNum,
+                        @PathVariable("cardId") String cardId){
 
         log.info("client fio " + fio + " client dul " + dul + " client cardNum " + cardNum);
 
@@ -39,11 +40,11 @@ public class HomeController {
         String totalBalance= balance.getBalance() + " " + balance.getCurrency();
 
         RestTemplate restTemplate = new RestTemplate();
-        HttpEntity<Request> request = new HttpEntity<>(new Request(3, "{\"cardId\":3}", RequestTypes.JSON));
+        HttpEntity<Request> request = new HttpEntity<>(new Request(3, "{\"cardId\":"+cardId+"}", RequestTypes.JSON));
 
         log.info("request.toString()" + request.toString());
 
-        ResponseEntity<String> responseEntityStr = restTemplate.postForEntity("http://localhost:8080/card/3",
+        ResponseEntity<String> responseEntityStr = restTemplate.postForEntity("http://localhost:8080/card/"+cardId,
                         request, String.class);
         log.info("responseEntityStr.getBody()" + responseEntityStr.getBody());
 
