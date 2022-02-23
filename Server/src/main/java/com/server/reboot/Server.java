@@ -26,6 +26,6 @@ public class Server {
 
             System.out.println(ex);
         }
-        return new Balance(Cur.RUR.toString(), ammount);
+        return new Balance(ammount,Cur.RUR.toString());
     }
 }

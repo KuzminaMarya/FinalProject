@@ -1,6 +1,6 @@
-package com.controller.balance;
+package com.server.server.repository;
 
-import com.controller.balance.Card;
+import com.server.server.entity.Card;
 import org.springframework.data.repository.CrudRepository;
 
 

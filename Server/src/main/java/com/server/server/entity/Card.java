@@ -1,4 +1,4 @@
-package com.controller.balance;
+package com.server.server.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
