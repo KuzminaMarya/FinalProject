@@ -13,7 +13,7 @@ import lombok.Getter;
 @Getter
 public class Bankomat {
     private String ATMId;
-    public static Balance insertCard(Client client) throws SQLException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public static Balance insertCard(Client client)  {
        return Server.getBalanceCard(client.getCardNum());
     }
 }

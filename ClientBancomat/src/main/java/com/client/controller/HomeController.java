@@ -34,7 +34,7 @@ public class HomeController {
     public String home( @PathVariable("fio") String fio,
                         @PathVariable("dul") String dul,
                         @PathVariable("cardNum") String cardNum,
-                        @PathVariable("cardId") String cardId) throws SQLException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+                        @PathVariable("cardId") String cardId)  {
 
         log.info("client fio " + fio + " client dul " + dul + " client cardNum " + cardNum);
 

@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 @Service
 public class BankomatService {
-    public Balance getClientBalance(Client client) throws SQLException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public Balance getClientBalance(Client client) {
         return Bankomat.insertCard(client);
     }
 }
