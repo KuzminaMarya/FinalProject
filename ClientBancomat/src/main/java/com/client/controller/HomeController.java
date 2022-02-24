@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
+
 @RestController
 @Log
 public class HomeController {
@@ -31,7 +34,7 @@ public class HomeController {
     public String home( @PathVariable("fio") String fio,
                         @PathVariable("dul") String dul,
                         @PathVariable("cardNum") String cardNum,
-                        @PathVariable("cardId") String cardId){
+                        @PathVariable("cardId") String cardId) throws SQLException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
 
         log.info("client fio " + fio + " client dul " + dul + " client cardNum " + cardNum);
 
