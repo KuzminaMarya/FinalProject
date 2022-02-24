@@ -12,7 +12,8 @@ public class Server {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
             try (Connection conn = DriverManager.getConnection(url, username, password)){
                 System.out.println("Connection to DB succesfull!");
-                PreparedStatement pr = conn.prepareStatement("select ammount from card where card_num='"+cardNum+"'");
+                PreparedStatement pr = conn.prepareStatement("select ammount from card where card_num=?");
+                pr.setString(1,cardNum);
                 ResultSet rs=pr.executeQuery();
                 while (rs.next()) {
                     ammount = rs.getInt(1);
