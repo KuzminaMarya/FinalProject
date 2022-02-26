@@ -25,7 +25,7 @@ public class HomeController {
         this.atmService = atmService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/ready")
     public String getBankomatStatus() {
         return "Банкомат готов";
     }
