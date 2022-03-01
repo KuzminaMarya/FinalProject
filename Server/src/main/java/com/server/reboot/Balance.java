@@ -6,7 +6,7 @@ public class Balance {
     private String currency;
     private int balance;
 
-    public Balance(String currency, int balance){
+    public Balance(int balance, String currency){
         this.currency=currency;
         this.balance=balance;
     }

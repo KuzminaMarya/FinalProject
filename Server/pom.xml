@@ -16,4 +16,21 @@
     <packaging>jar</packaging>
     <name>Server</name>
 
+    <properties>
+        <lombok.version>1.18.20</lombok.version>
+        <junit-jupiter.version>5.7.2</junit-jupiter.version>
+        <jackson-databind.version>2.12.4</jackson-databind.version>
+        <jackson-dataformat-xml.version>2.11.1</jackson-dataformat-xml.version>
+        <server.version>1</server.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
 </project>
